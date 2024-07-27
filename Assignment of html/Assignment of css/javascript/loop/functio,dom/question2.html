@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Red Circle</title>
+    <style>
+        #redCircle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle Red Circle</button>
+    <div id="redCircle"></div>
+
+    <script>
+        
+        var button = document.getElementById('toggleButton');
+        var circle = document.getElementById('redCircle');
+
+        
+        button.addEventListener('click', function() {
+            
+            if (circle.style.display === 'none') {
+                circle.style.display = 'block';
+            } else {
+                circle.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Text</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>Text Highlight Example</h2>
+    <p id="paragraph">
+        This is a sample paragraph where you can search and highlight text. Feel free to test different search terms.
+    </p>
+
+    <input type="text" id="searchText" placeholder="Enter text to search">
+    <button onclick="highlightText()">Highlight Text</button>
+
+    <script>
+        function highlightText() {
+            // Get the paragraph and search input elements
+            const paragraph = document.getElementById('paragraph');
+            const searchText = document.getElementById('searchText').value;
+            
+            // Create a regular expression to find the search text, case-insensitive
+            const regex = new RegExp( sample);
+            
+            // Replace the content with highlighted text
+            paragraph.innerHTML = paragraph.textContent.replace(regex, '<span class="highlight">$1</span>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Box Color</title>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorBox"></div>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        const colors = ['yellow', 'blue', 'red', 'green', 'tan', 'crimson'];
+        let currentIndex = 0;
+
+        function changeColor() {
+            const colorBox = document.getElementById('colorBox');
+            
+            colorBox.style.backgroundColor = colors[currentIndex];
+            
+            
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>

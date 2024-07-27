@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+               display: flex;
+               justify-content: space-between;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .dropdown-item{
+            display: none;
+            position: absolute;
+            left: -40px;
+        }
+        .dropdown{ position: relative;
+        left: -40px;}
+        .dropdown:hover .dropdown-item{
+            display: block;
+        }
+        .dropdown-item2{
+            display: none;
+            position: absolute;
+            left: 60px;}
+        .dropdown2{ position: relative;
+        left: 0px;}
+        .dropdown2:hover .dropdown-item2{
+            display: block;
+        }
+        .dropdown-item3{
+            display: none;
+            position: absolute;
+            left: 60px;}
+        .dropdown3{ position: relative;
+        left: 0px;}
+        .dropdown3:hover .dropdown-item3{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>Home</li>
+        <li class="dropdown">web designs
+            <ul class="dropdown-item">
+                <li>resources </li>
+                <li class="dropdown2">tutorials
+                    <ul class="dropdown-item2">
+                        <li>html/css</li>
+                        <li>jquary</li>
+                        <li class="dropdown3">others
+                            <ul class="dropdown-item3">
+                                <li>stuff</li>
+                                <li>things</li>
+                                <li>other stuff</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>wordpress+</li>
+            </ul>
+        </li>
+        <li>graphic design</li>
+        <li>inspiration</li>
+        <li>Contact</li>
+        <li>about</li>
+    </ul>
+</body>
+</html>

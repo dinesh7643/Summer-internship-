@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations</title>
+    <style>
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="userInput" placeholder="Enter a number">
+    <button id="squareButton">Display Square</button>
+    <button id="tableButton">Display Table</button>
+    <button id="cubeButton">Display Cube</button>
+
+    <div id="result"></div>
+
+    <script>
+        
+        var userInput = document.getElementById('userInput');
+        var result = document.getElementById('result');
+
+        
+        document.getElementById('squareButton').addEventListener('click', function() {
+            var number = parseInt(userInput.value);
+            if (!isNaN(number)) {
+                result.innerHTML = 'Square: ' + (number * number);
+            } else {
+                result.innerHTML = 'Please enter a valid number.';
+            }
+        });
+
+        document.getElementById('tableButton').addEventListener('click', function() {
+            var number = parseInt(userInput.value);
+            if (!isNaN(number)) {
+                var table = 'Table:<br>';
+                for (var i = 1; i <= 10; i++) {
+                    table += number + ' x ' + i + ' = ' + (number * i) + '<br>';
+                }
+                result.innerHTML = table;
+            } else {
+                result.innerHTML = 'Please enter a valid number.';
+            }
+        });
+
+        document.getElementById('cubeButton').addEventListener('click', function() {
+            var number = parseInt(userInput.value);
+            if (!isNaN(number)) {
+                result.innerHTML = 'Cube: ' + (number * number * number);
+            } else {
+                result.innerHTML = 'Please enter a valid number.';
+            }
+        });
+    </script>
+</body>
+</html>
